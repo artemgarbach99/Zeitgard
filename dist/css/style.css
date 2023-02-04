@@ -244,6 +244,27 @@ h6 {
   z-index: 5;
 }
 
+.header._header-scroll {
+  position: fixed;
+  top: -100%;
+  padding: 0.3125rem 0rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.05);
+          box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.05);
+}
+
+.header._header-scroll .header__link-whatsapp,
+.header._header-scroll .header__link-zeitgard {
+  padding: 0.625rem 1.5rem;
+}
+
+.header._header-show {
+  -webkit-transition: top 0.5s ease 0s;
+  -o-transition: top 0.5s ease 0s;
+  transition: top 0.5s ease 0s;
+  top: 0;
+}
+
 .header__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2216,14 +2237,18 @@ h6 {
 }
 
 .body-main-creams__content-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.4375rem;
+}
+
+.body-main-creams__content-body.tab.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .body-main-creams__title {

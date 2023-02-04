@@ -3373,7 +3373,7 @@
                 },
                 on: {}
             });
-            if (document.querySelector(".swiper-creams")) new core(".swiper-creams", {
+            if (document.querySelector(".swiper-creams-01")) new core(".swiper-creams-01", {
                 modules: [ Navigation ],
                 observer: true,
                 observeParents: true,
@@ -3381,9 +3381,25 @@
                 spaceBetween: 0,
                 autoHeight: false,
                 speed: 800,
+                allowTouchMove: false,
                 navigation: {
-                    prevEl: ".body-main-creams__button-prev",
-                    nextEl: ".body-main-creams__button-next"
+                    prevEl: ".body-main-creams__button-prev.button-prev-01",
+                    nextEl: ".body-main-creams__button-next.button-prev-01"
+                },
+                on: {}
+            });
+            if (document.querySelector(".swiper-creams-02")) new core(".swiper-creams-02", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                autoHeight: false,
+                speed: 800,
+                allowTouchMove: false,
+                navigation: {
+                    prevEl: ".body-main-creams__button-prev.button-prev-02",
+                    nextEl: ".body-main-creams__button-next.button-prev-02"
                 },
                 on: {}
             });
@@ -3398,6 +3414,32 @@
             use_native: true
         });
         let addWindowScrollEvent = false;
+        function headerScroll() {
+            addWindowScrollEvent = true;
+            const header = document.querySelector("header.header");
+            const headerShow = header.hasAttribute("data-scroll-show");
+            const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+            const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+            let scrollDirection = 0;
+            let timer;
+            document.addEventListener("windowScroll", (function(e) {
+                const scrollTop = window.scrollY;
+                clearTimeout(timer);
+                if (scrollTop >= startPoint) {
+                    !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
+                    if (headerShow) {
+                        if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                        timer = setTimeout((() => {
+                            !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                        }), headerShowTimer);
+                    }
+                } else {
+                    header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
+                    if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                }
+                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+            }));
+        }
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
@@ -3406,8 +3448,45 @@
                 }));
             }
         }), 0);
+        document.querySelector("#back").addEventListener("click", (function() {
+            const tabid = parseInt(document.querySelector(".tabs-01 > .tab.active").getAttribute("data-tab")) - 1;
+            document.querySelectorAll(".tabs-01 > .tab.active").forEach((function(b) {
+                b.classList.remove("active");
+            }));
+            document.querySelectorAll(".tabs-01 > .tab[data-tab='" + tabid + "']").forEach((function(b) {
+                b.classList.add("active");
+            }));
+        }));
+        document.querySelector("#next").addEventListener("click", (function() {
+            const tabid = parseInt(document.querySelector(".tabs-01 > .tab.active").getAttribute("data-tab")) + 1;
+            document.querySelectorAll(".tabs-01 > .tab.active").forEach((function(b) {
+                b.classList.remove("active");
+            }));
+            document.querySelectorAll(".tabs-01 > .tab[data-tab='" + tabid + "']").forEach((function(b) {
+                b.classList.add("active");
+            }));
+        }));
+        document.querySelector("#back02").addEventListener("click", (function() {
+            const tabid = parseInt(document.querySelector(".tabs-02 > .tab.active").getAttribute("data-tab")) - 1;
+            document.querySelectorAll(".tabs-02 > .tab.active").forEach((function(b) {
+                b.classList.remove("active");
+            }));
+            document.querySelectorAll(".tabs-02 > .tab[data-tab='" + tabid + "']").forEach((function(b) {
+                b.classList.add("active");
+            }));
+        }));
+        document.querySelector("#next02").addEventListener("click", (function() {
+            const tabid = parseInt(document.querySelector(".tabs-02 > .tab.active").getAttribute("data-tab")) + 1;
+            document.querySelectorAll(".tabs-02 > .tab.active").forEach((function(b) {
+                b.classList.remove("active");
+            }));
+            document.querySelectorAll(".tabs-02 > .tab[data-tab='" + tabid + "']").forEach((function(b) {
+                b.classList.add("active");
+            }));
+        }));
         window["FLS"] = true;
         isWebp();
         tabs();
+        headerScroll();
     })();
 })();
