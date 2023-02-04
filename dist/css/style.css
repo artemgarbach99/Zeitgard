@@ -236,7 +236,7 @@ h6 {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -2212,6 +2212,10 @@ h6 {
 }
 
 .body-main-creams__content {
+  width: 44.8717948718%;
+}
+
+.body-main-creams__content-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2220,7 +2224,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.4375rem;
-  width: 44.8717948718%;
 }
 
 .body-main-creams__title {
