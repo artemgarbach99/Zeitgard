@@ -707,11 +707,9 @@ h6 {
   z-index: 1;
 }
 
-.no-webp .main-block::before{
-  background: url("../img/main-block/bg.png") 0 0/100% 100% no-repeat; }
-
 .main-block::before {
   content: "";
+  background: url("../img/main-block/bg.png") 0 0/100% 100% no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1326,14 +1324,12 @@ h6 {
   color: #787A7E;
 }
 
-.no-webp .main-features{
-  background: url("../img/features/bg.png") 100% 0 no-repeat; }
-
 .main-features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2.5rem;
+  background: url("../img/features/bg.png") 100% 0 no-repeat;
 }
 
 .main-features__block {
@@ -1578,12 +1574,10 @@ h6 {
   overflow: hidden;
 }
 
-.no-webp .device::before{
-  background: url("../img/device/bg.png") 0 0/contain no-repeat; }
-
 .device::before {
   content: "";
   z-index: -1;
+  background: url("../img/device/bg.png") 0 0/contain no-repeat;
   width: 73.8541666667%;
   height: 173.5618115055%;
   position: absolute;
@@ -1591,12 +1585,10 @@ h6 {
   right: -2.34375%;
 }
 
-.no-webp .device::after{
-  background: url("../img/device/ellipse.png") 0 0/100% 100% no-repeat; }
-
 .device::after {
   content: "";
   z-index: -1;
+  background: url("../img/device/ellipse.png") 0 0/100% 100% no-repeat;
   width: 37.6041666667%;
   height: 95.2264381885%;
   position: absolute;
@@ -2097,11 +2089,9 @@ h6 {
   z-index: 1;
 }
 
-.no-webp .creams::before{
-  background: url("../img/creams/bg.png") 0 0/100% 100% no-repeat; }
-
 .creams::before {
   content: "";
+  background: url("../img/creams/bg.png") 0 0/100% 100% no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2600,13 +2590,3 @@ h6 {
     transition: all 0.3s ease 0s;
   }
 }
-
-.webp .main-block::before{ background: url(../img/main-block/bg.webp) 0 0/100% 100% no-repeat; }
-
-.webp .main-features{ background: url(../img/features/bg.webp) 100% 0 no-repeat; }
-
-.webp .device::before{ background: url(../img/device/bg.webp) 0 0/contain no-repeat; }
-
-.webp .device::after{ background: url(../img/device/ellipse.webp) 0 0/100% 100% no-repeat; }
-
-.webp .creams::before{ background: url(../img/creams/bg.webp) 0 0/100% 100% no-repeat; }
