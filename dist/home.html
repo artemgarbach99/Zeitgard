@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230207144614">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230208181652">
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css?_v=20230208181652" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -24,8 +25,20 @@
 						</a>
 						<p class="header__text">устройство для очищения
 							и ухода за кожей лица и тела</p>
+						<div class="header__menu menu-header">
+							<nav class="menu-header__body">
+								<button type="button" class="header__icon-menu icon-menu"></button>
+								<ul class="menu-header__list">
+									<li class="menu-header__item"><a href="#" class="menu-header__link">Текст</a></li>
+									<li class="menu-header__item"><a href="#" class="menu-header__link">Текст</a></li>
+									<li class="menu-header__item"><a href="#" class="menu-header__link">Текст</a></li>
+									<li class="menu-header__item"><a href="#" class="menu-header__link">Текст</a></li>
+									<li class="menu-header__item"><a href="#" class="menu-header__link">Текст</a></li>
+								</ul>
+							</nav>
+						</div>
 					</div>
-					<div class="header__links">
+					<div data-da=".menu-header__body, 768" class="header__links">
 						<a href="#" class="header__link-whatsapp _icon-viber">Написать в WhatsApp</a>
 						<a href="#" class="header__link-zeitgard _icon-arrow">Заказать zeitgard pro</a>
 					</div>
@@ -82,7 +95,7 @@
 							</div>
 						</div>
 						<div class="main-block__images images-main-block">
-							<div class="images-main-block__column">
+							<div class="images-main-block__column _first">
 								<div class="images-main-block__block">
 									<div class="images-main-block__image01">
 										<img data-src="img/main-block/01.png" alt="">
@@ -205,17 +218,20 @@
 										<div class="main-features__swiper swiper-wrapper">
 											<div class="main-features__slide swiper-slide">
 												<div class="main-features__video-ibg">
-													<img data-src="img/features/test.png" alt="">
+													<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="D4b91iPClmk">
+													</div>
 												</div>
 											</div>
 											<div class="main-features__slide swiper-slide">
 												<div class="main-features__video-ibg">
-													<img data-src="img/features/test.png" alt="">
+													<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+													</div>
 												</div>
 											</div>
 											<div class="main-features__slide swiper-slide">
 												<div class="main-features__video-ibg">
-													<img data-src="img/features/test.png" alt="">
+													<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="2NlA-q-mpUk">
+													</div>
 												</div>
 											</div>
 										</div>
@@ -336,25 +352,10 @@
 												</p>
 											</div>
 										</div>
-										<div class="body-main-device__wrapper-swiper">
-											<div class="body-main-device__inner-swiper">
-												<div class="body-main-device__slider swiper-device">
-													<div class="body-main-device__wrapper swiper-wrapper">
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/01.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/02.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/03.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/04.png" alt="">
-														</div>
-													</div>
-													<button type="button" class="body-main-device__button-prev _icon-arrow-full"></button>
-													<button type="button" class="body-main-device__button-next _icon-arrow-full"></button>
+										<div class="body-main-device__wrapper">
+											<div class="body-main-device__inner">
+												<div class="body-main-device__image">
+													<img data-src="img/device/01.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -418,25 +419,10 @@
 												</p>
 											</div>
 										</div>
-										<div class="body-main-device__wrapper-swiper">
-											<div class="body-main-device__inner-swiper">
-												<div class="body-main-device__slider swiper-device">
-													<div class="body-main-device__wrapper swiper-wrapper">
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/01.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/02.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/03.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/04.png" alt="">
-														</div>
-													</div>
-													<button type="button" class="body-main-device__button-prev _icon-arrow-full"></button>
-													<button type="button" class="body-main-device__button-next _icon-arrow-full"></button>
+										<div class="body-main-device__wrapper">
+											<div class="body-main-device__inner">
+												<div class="body-main-device__image">
+													<img data-src="img/device/03.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -479,25 +465,10 @@
 													участников исследования: 20</p>
 											</div>
 										</div>
-										<div class="body-main-device__wrapper-swiper">
-											<div class="body-main-device__inner-swiper">
-												<div class="body-main-device__slider swiper-device">
-													<div class="body-main-device__wrapper swiper-wrapper">
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/01.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/02.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/03.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/04.png" alt="">
-														</div>
-													</div>
-													<button type="button" class="body-main-device__button-prev _icon-arrow-full"></button>
-													<button type="button" class="body-main-device__button-next _icon-arrow-full"></button>
+										<div class="body-main-device__wrapper">
+											<div class="body-main-device__inner">
+												<div class="body-main-device__image">
+													<img data-src="img/device/02.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -560,25 +531,10 @@
 												</p>
 											</div>
 										</div>
-										<div class="body-main-device__wrapper-swiper">
-											<div class="body-main-device__inner-swiper">
-												<div class="body-main-device__slider swiper-device">
-													<div class="body-main-device__wrapper swiper-wrapper">
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/01.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/02.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/03.png" alt="">
-														</div>
-														<div class="body-main-device__slide swiper-slide">
-															<img data-src="img/device/04.png" alt="">
-														</div>
-													</div>
-													<button type="button" class="body-main-device__button-prev _icon-arrow-full"></button>
-													<button type="button" class="body-main-device__button-next _icon-arrow-full"></button>
+										<div class="body-main-device__wrapper">
+											<div class="body-main-device__inner">
+												<div class="body-main-device__image">
+													<img data-src="img/device/04.png" alt="">
 												</div>
 											</div>
 										</div>
@@ -602,28 +558,26 @@
 								<div class="main-video-reviews__slider swiper-video-reviews">
 									<div class="main-video-reviews__wrapper swiper-wrapper">
 										<div class="main-video-reviews__slide swiper-slide">
-											<div class="main-video-reviews__video-ibg">
-												<img data-src="img/video-reviews/test.png" alt="">
+											<div class="main-video-reviews__video">
+												<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="D4b91iPClmk">
+												</div>
 											</div>
 										</div>
 										<div class="main-video-reviews__slide swiper-slide">
-											<div class="main-video-reviews__video-ibg">
-												<img data-src="img/video-reviews/test.png" alt="">
+											<div class="main-video-reviews__video">
+												<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+												</div>
 											</div>
 										</div>
 										<div class="main-video-reviews__slide swiper-slide">
-											<div class="main-video-reviews__video-ibg">
-												<img data-src="img/video-reviews/test.png" alt="">
-											</div>
-										</div>
-										<div class="main-video-reviews__slide swiper-slide">
-											<div class="main-video-reviews__video-ibg">
-												<img data-src="img/video-reviews/test.png" alt="">
+											<div class="main-video-reviews__video">
+												<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="2NlA-q-mpUk">
+												</div>
 											</div>
 										</div>
 									</div>
-									<button type="button" class="main-video-reviews__button-prev _icon-arrow-full"></button>
-									<button type="button" class="main-video-reviews__button-next _icon-arrow-full"></button>
+									<button type="button" class="main-video-reviews__button-prev hover _icon-arrow-full"></button>
+									<button type="button" class="main-video-reviews__button-next hover _icon-arrow-full"></button>
 								</div>
 							</div>
 							<div class="main-video-reviews__content">
@@ -635,7 +589,8 @@
 											которое станет эффективной заменой походам к косметологу, гарантированы.</p>
 									</div>
 								</div>
-								<button type="submit" class="main-video-reviews__button h4 _icon-arrow">ОТЗЫВЫ ZEITGARD
+								<button type="submit" class="main-video-reviews__button hover h4 _icon-arrow">ОТЗЫВЫ
+									ZEITGARD
 									PRO</button>
 							</div>
 						</div>
@@ -654,9 +609,9 @@
 						</div>
 						<div data-tabs class="creams__main main-creams">
 							<nav data-tabs-titles class="main-creams__navigation">
-								<button type="button" class="main-creams__title _tab-active">Крема для процедур
+								<button type="button" class="main-creams__title hover _tab-active">Крема для процедур
 									с Zeitgard pro</button>
-								<button type="button" class="main-creams__title">Крема для усиления
+								<button type="button" class="main-creams__title hover">Крема для усиления
 									эффекта от применения</button>
 							</nav>
 							<div data-tabs-body class="main-creams__content">
@@ -780,8 +735,8 @@
 														</div>
 													</div>
 												</div>
-												<button type="button" id="back" class="body-main-creams__button-prev button-prev-01 _icon-arrow-full"></button>
-												<button type="button" id="next" class="body-main-creams__button-next button-prev-01 _icon-arrow-full"></button>
+												<button type="button" id="back" class="body-main-creams__button-prev button-prev-01 hover _icon-arrow-full"></button>
+												<button type="button" id="next" class="body-main-creams__button-next button-prev-01 hover _icon-arrow-full"></button>
 											</div>
 										</div>
 									</div>
@@ -936,7 +891,7 @@
 							<span class="order__column-line _icon-border"></span>
 							<div class="order__column">
 								<div class="order__image _image02">
-									<img data-src="img/order/01.svg" alt="">
+									<img data-src="img/order/02.svg" alt="">
 								</div>
 								<div class="order__block">
 									<h3 class="order__lable">С Вами свяжется партнер LR и согласует</h3>
@@ -946,7 +901,7 @@
 							<span class="order__column-line _icon-border"></span>
 							<div class="order__column">
 								<div class="order__image _image03">
-									<img data-src="img/order/01.svg" alt="">
+									<img data-src="img/order/03.svg" alt="">
 								</div>
 								<div class="order__block">
 									<h3 class="order__lable">Оплатите
@@ -958,7 +913,7 @@
 							<span class="order__column-line _icon-border"></span>
 							<div class="order__column">
 								<div class="order__image _image04">
-									<img data-src="img/order/01.svg" alt="">
+									<img data-src="img/order/04.svg" alt="">
 								</div>
 								<div class="order__block">
 									<h3 class="order__lable">Дождитесь доставку Вашего устройства</h3>
@@ -974,7 +929,7 @@
 						<div class="order__line-wrap">
 							<span>При оформлении Zeitgard PRO с регистрацией как партнера компании LR на устройство
 								предоставляется гарантия 2 года</span>
-							<a href="#">подробнее </a>
+							<a href="#" class="hover">подробнее </a>
 						</div>
 					</div>
 				</div>
@@ -993,20 +948,20 @@
 							</span>
 						</div>
 						<nav class="top-footer__links">
-							<a href="#" class="top-footer__link">Главная</a>
-							<a href="#" class="top-footer__link">Статьи</a>
-							<a href="#" class="top-footer__link">Отзывы</a>
-							<a href="#" class="top-footer__link">Заказать</a>
+							<a href="#" class="top-footer__link hover">Главная</a>
+							<a href="#" class="top-footer__link hover">Статьи</a>
+							<a href="#" class="top-footer__link hover">Отзывы</a>
+							<a href="#" class="top-footer__link hover">Заказать</a>
 						</nav>
-						<button type="submit" class="top-footer__button _icon-arrow">Заказать zeitgard pro</button>
+						<button type="submit" class="top-footer__button hover _icon-arrow">Заказать zeitgard pro</button>
 					</div>
 					<div class="footer__bottom bottom-footer">
 						<div class="bottom-footer__content">
 							<div class="bottom-footer__line">
 								<span class="bottom-footer__title">Мы в соцсетях</span>
 								<div class="bottom-footer__line-wrap">
-									<a href="#" class="bottom-footer__vk _icon-vk"></a>
-									<a href="#" class="bottom-footer__whatsapp _icon-viber"></a>
+									<a href="#" class="bottom-footer__vk hover _icon-vk"></a>
+									<a href="#" class="bottom-footer__whatsapp hover _icon-viber"></a>
 								</div>
 							</div>
 							<div class="bottom-footer__text">
@@ -1020,8 +975,8 @@
 						</div>
 						<div class="bottom-footer__links">
 							<div class="bottom-footer__row">
-								<a href="#" class="bottom-footer__link">Сайт партнера компании LR</a>
-								<a href="#" class="bottom-footer__link">Публичная оферта</a>
+								<a href="#" class="bottom-footer__link  hover">Сайт партнера компании LR</a>
+								<a href="#" class="bottom-footer__link  hover">Публичная оферта</a>
 							</div>
 							<div class="bottom-footer__text">
 								<p>Оформление заявки не приволит к автоматической регистрации Вас как партнёра компании ЛР</p>
@@ -1044,6 +999,44 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		document.querySelector("#back").addEventListener("click", function() {
+			const tabid = parseInt(document.querySelector(".tabs-01 > .tab.active").getAttribute("data-tab")) - 1;
+			document.querySelectorAll(".tabs-01 > .tab.active").forEach(function(b) {
+				b.classList.remove("active");
+			});
+			document.querySelectorAll(".tabs-01 > .tab[data-tab='" + tabid + "']").forEach(function(b) {
+				b.classList.add("active");
+			});
+		});
+		document.querySelector("#next").addEventListener("click", function() {
+			const tabid = parseInt(document.querySelector(".tabs-01 > .tab.active").getAttribute("data-tab")) + 1;
+			document.querySelectorAll(".tabs-01 > .tab.active").forEach(function(b) {
+				b.classList.remove("active");
+			});
+			document.querySelectorAll(".tabs-01 > .tab[data-tab='" + tabid + "']").forEach(function(b) {
+				b.classList.add("active");
+			});
+		});
+		document.querySelector("#back02").addEventListener("click", function() {
+			const tabid = parseInt(document.querySelector(".tabs-02 > .tab.active").getAttribute("data-tab")) - 1;
+			document.querySelectorAll(".tabs-02 > .tab.active").forEach(function(b) {
+				b.classList.remove("active");
+			});
+			document.querySelectorAll(".tabs-02 > .tab[data-tab='" + tabid + "']").forEach(function(b) {
+				b.classList.add("active");
+			});
+		});
+		document.querySelector("#next02").addEventListener("click", function() {
+			const tabid = parseInt(document.querySelector(".tabs-02 > .tab.active").getAttribute("data-tab")) + 1;
+			document.querySelectorAll(".tabs-02 > .tab.active").forEach(function(b) {
+				b.classList.remove("active");
+			});
+			document.querySelectorAll(".tabs-02 > .tab[data-tab='" + tabid + "']").forEach(function(b) {
+				b.classList.add("active");
+			});
+		});
+	</script>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -1056,7 +1049,12 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20230207144614"></script>
+	<script src="js/app.min.js?_v=20230208181652"></script>
+	<script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js?_v=20230208181652"></script>
+	<script>
+		const players = Plyr.setup('#player');
+		// const player = new Plyr('#player');
+	</script>
 </body>
 
 </html>
